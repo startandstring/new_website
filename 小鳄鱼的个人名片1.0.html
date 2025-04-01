@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人主页 - 图像处理专家</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-r from-blue-50 to-indigo-50 min-h-screen">
+  <!-- 头像容器 -->
+  <div class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+    <div class="flex justify-center items-center w-20 h-20 rounded-full bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:scale-105" id="avatarContainer">
+      <img src="./小鳄鱼.jpeg" alt="头像" class="w-16 h-16 rounded-full object-cover border-2 border-blue-200" id="avatar">
+    </div>
+  </div>
+
+  <main class="container mx-auto px-4 py-12 pt-24 max-w-6xl">
+    <!-- 广告语 -->
+    <section class="text-center mb-12 animate-fade-in-up">
+      <h2 class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        用像素编织梦想 · 以设计传递温度
+      </h2>
+    </section>
+  
+    <!-- 功能模块区域 -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+      <!-- 风格转换 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-palette text-3xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">风格转换</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">转换任何图像风格，精准保留人物特征和文字细节</p>
+          <div class="space-y-1 text-sm text-blue-500">
+            <p>· 支持20+风格（卡通、吉卜力等）</p>
+            <p>· 智能推理场景元素</p>
+            <p>· 多人物混合风格生成</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 超真实人像 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-user-astronaut text-3xl text-amber-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">超真实人像</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">通过文字描述生成/修改高精度人物形象</p>
+          <div class="space-y-1 text-sm text-amber-500">
+            <p>· 无生成限制</p>
+            <p>· 可定制姿势/表情</p>
+            <p>· 影视级细节处理</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 虚拟试穿 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-tshirt text-3xl text-purple-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">虚拟试穿</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">上传服装和模特图，自动合成试穿效果</p>
+          <div class="space-y-1 text-sm text-purple-500">
+            <p>· 布料智能变形</p>
+            <p>· 自动背景融合</p>
+            <p>· 10秒快速出图</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 动漫设计 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-paint-brush text-3xl text-green-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">动漫设计</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">批量生成动漫角色与场景，保持特征一致</p>
+          <div class="space-y-1 text-sm text-green-500">
+            <p>· 多角色同时处理</p>
+            <p>· 视角自由转换</p>
+            <p>· 支持续写设计</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI设计 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-laptop-code text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">UI设计</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">草图/代码转专业UI设计图</p>
+          <div class="space-y-1 text-sm text-red-500">
+            <p>· 手绘转网页</p>
+            <p>· 代码可视化</p>
+            <p>· 风格迁移</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 图像提取 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-cut text-3xl text-pink-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">图像提取</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">精确抠图，连发丝都能完美保留</p>
+          <div class="space-y-1 text-sm text-pink-500">
+            <p>· 100%自动识别边缘</p>
+            <p>· 支持复杂背景</p>
+            <p>· 输出透明图层</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 专业修图 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fas fa-magic text-3xl text-indigo-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">专业修图</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">视角自由转换与专业级后期处理</p>
+          <div class="space-y-1 text-sm text-indigo-500">
+            <p>· 智能透视修正</p>
+            <p>· 批量处理支持</p>
+            <p>· 无损画质优化</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube封面 -->
+      <div class="group relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-500 ease-in-out h-52 overflow-hidden">
+        <div class="transition-all duration-500 ease-in-out group-hover:opacity-0 flex flex-col items-center text-center">
+          <i class="fab fa-youtube text-3xl text-red-600 mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">YouTube封面</h3>
+        </div>
+        <div class="absolute inset-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out bg-white flex flex-col items-center justify-center text-center">
+          <p class="text-gray-600 mb-3">符合平台规范的封面设计与优化</p>
+          <div class="space-y-1 text-sm text-red-500">
+            <p>· 多尺寸模板</p>
+            <p>· 热点区域检测</p>
+            <p>· 视觉冲击力优化</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- 个人介绍模态框 -->
+  <div id="profileModal" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 transition-opacity duration-300">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl p-8 max-w-md w-full shadow-2xl transform transition-all duration-300 opacity-0 scale-95">
+      <button id="closeButton" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <h2 class="text-2xl font-bold mb-4 text-blue-600">个人简介</h2>
+      <p class="text-gray-600 leading-relaxed">
+        我是一名在读的本校学生小鳄鱼，专攻于设计以及计算机，对于设计和编辑图片有深刻的理解。
+        如果你有任何对于图片的需求，相信我，从初识到深交，只需一次交流。
+      </p>
+      <div class="mt-6 flex space-x-4">
+        <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors" onclick="showTooltip('QQ', '2625145759', event)">
+          <i class="fab fa-qq text-xl"></i>
+        </a>
+        <a href="#" class="text-blue-500 hover:text-blue-700 transition-colors" onclick="showTooltip('微信', '15525124626', event)">
+          <i class="fab fa-weixin text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showTooltip(platform, number, event) {
+  console.log('触发弹窗:', platform, number);
+  let tooltip = document.createElement('div');
+  tooltip.className = 'fixed bg-white p-4 rounded-lg shadow-lg border border-gray-200 transition-opacity duration-300 opacity-0 z-[9999]';
+  tooltip.innerHTML = `
+    <div class="text-center">
+      <p class="font-medium text-gray-700 mb-2">${platform}号码</p>
+      <p class="text-blue-600 font-mono tracking-wide">${number}</p>
+      <div class="absolute top-0 right-0 mt-1 mr-1 cursor-pointer" onclick="this.parentElement.parentElement.remove()">
+        <i class="fas fa-times text-gray-400 hover:text-gray-600"></i>
+      </div>
+    </div>
+  `;
+
+  const rect = event.target.getBoundingClientRect();
+  tooltip.style.left = `${rect.left + window.scrollX}px`;
+  tooltip.style.top = `${rect.top + window.scrollY - 40}px`;
+  
+  document.body.appendChild(tooltip);
+  setTimeout(() => tooltip.style.opacity = '1', 10);
+
+  // 点击外部关闭
+  const clickHandler = (e) => {
+    if (!tooltip.contains(e.target)) {
+      tooltip.remove();
+      document.removeEventListener('click', clickHandler);
+    }
+  };
+  setTimeout(() => document.addEventListener('click', clickHandler), 100);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+      const avatar = document.getElementById('avatarContainer');
+      const modal = document.getElementById('profileModal');
+      const closeBtn = document.getElementById('closeButton');
+
+      // 头像点击事件
+      avatar.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+          modal.querySelector('div').classList.add('opacity-100', 'scale-100');
+        }, 10);
+      });
+
+      // 关闭模态框
+      function closeModal() {
+        modal.querySelector('div').classList.remove('opacity-100', 'scale-100');
+        setTimeout(() => {
+          modal.classList.add('hidden');
+        }, 300);
+      }
+
+      // 点击遮罩关闭
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+
+      // 点击关闭按钮
+      closeBtn.addEventListener('click', closeModal);
+    });
+  </script>
+</body>
+</html>
